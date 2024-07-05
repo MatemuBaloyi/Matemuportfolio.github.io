@@ -47,9 +47,7 @@ header .logo {
 }
 
 a .logo .matemu{
-    background: var(--gradient-color-bg);
-    
-    
+    background: var(--gradient-color-bg); 
 }
 nav {
     display: flex;
@@ -92,10 +90,10 @@ nav .nav-list li a.active {
 .mobile-nav {
     display: none;
     position: fixed;
-    top: 0;
+    top: 7%;
     right: 0;
     width: 100%;
-    height: 35vh;
+    height: 28vh;
     background-color: rgba(28, 77, 168, 0.9);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0,0,0,0.1);
@@ -106,23 +104,24 @@ nav .nav-list li a.active {
 }
 .mobile-nav ul {
     list-style: none;
-    padding: 0 170px;
     width: 100%;
     justify-content: center;
+    align-items: center;
+    padding-left: 40%;
     
 }
 .mobile-nav ul li {
     margin: 1rem 0;
 }
-.mobile-nav ul li:hover{
-    color: #FFF;
-}
+
 .mobile-nav ul li a {
     text-decoration: none;
     font-size: 1.5rem;
     color: #f5ebeb;
+    transition: color 0.3s ease-in-out;
     width: 100%;
 }
+
 .mobile-nav .close-menu {
     position: absolute;
     top: 50px;
@@ -131,7 +130,7 @@ nav .nav-list li a.active {
     color: var(--main-color);
 }
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 630px) {
     nav .nav-list {
         display: none;
     }
@@ -228,7 +227,7 @@ section .homes{
 .social-media a{
     width: 40px;
     height: 40px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: var(--main-color);
     background: #fff;
     display: inline-flex;
@@ -247,15 +246,18 @@ section .homes{
     justify-content: center;
     align-items: center;
 }
+.img-dalas{
+    display: flex;
+    justify-content: center;
+}
 
 .img-dalas img{
-    justify-content: center;
-    margin-left: 170px;
-    width: 350px;
-    height: auto;
-    border-radius:80px;
     z-index: 1;
+    width: 300px;
+    height: 400px;
+    border-radius:180px;
 }
+
 .text h2{
     padding-top: 30px;
     padding-left:30px;
@@ -264,13 +266,14 @@ section .homes{
 }
 
 /*-------------------portofolio----------------------*/
+
+
 .projects{
-    padding-top: 0px;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3 , 1fr);
-    gap: 5px;
-    margin-top: 5%;
+    gap: 10px;
+    margin: 5% 0 0 70px;
 }
 .portfolio .portfolio_header h3{
     padding-top: 70px;
@@ -281,9 +284,13 @@ section .homes{
 
 }
 .projects .portfolio_image{
-    border: 0.2px solid rgba(114,226,174,0,2);
+    display: flex;
     justify-content: center;
     align-items:center;
+    width: 340px;
+    height: 420px;
+    background-color: #615f5f;
+    border-radius: 20px;
     
 }
 .projects .portfolio_image h3{
@@ -292,20 +299,19 @@ section .homes{
 }
 .projects .portfolio_image p{
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #e9ecf0;
-}
-.projects .portfolio_image img{
-    width: 390px;
-    align-items: center;
-    height: auto;
-    margin: 0 10px 0 5px;
     
 }
+.projects .portfolio_image img{
+    width: 280px;
+    margin: 0 5px 0 5px;
+}
+
 .btn-box2{
     display: flex;
     justify-content: center;
-    margin: 2rem 30px 3rem 30px;
+    margin: 4rem 30px 3rem 30px;
     gap: 20px;
 }
 .btn-box2 .Web_btn{
@@ -325,30 +331,30 @@ section .homes{
     transition: 0.3s;              
 }
 /*--------------second about---------------*/
-.container{
-    width: 100%;
-    height:100vh;
-}
-.about h1{
+
+.about .aboutheader{
     text-align: center;
     font-size: 2rem;
     color: #ece4e4;
-    margin-bottom: 90px;
+    padding-top: 70px;
+    margin-bottom: 60px;
 }
 .row{
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
     justify-content: center;
+    margin-top: 100px;
 }
 .about-col-1{
+    display: flex;
     justify-content: center;
 }
 
  .about-col-1 img{
+    display: flex;
+    justify-content: center;
     width: 350px;
     border-radius: 45px;
-    justify-content: center;
-    margin-left: 100px;
 }
 
 .about-col-2 p{
@@ -356,10 +362,11 @@ section .homes{
     text-align: left;
     color: #e9ecf0;
 }
-.sub-title{
-    font-size: 1.3rem;
+.about-col-2 .sub-title{
+    font-size: 1.6rem;
     font-weight: 400;
-    color: #e9ecf0;
+    color: #f4f7fc;
+    margin-bottom: 30px;
 }
 .tab-titles{
     display: flex;
@@ -415,17 +422,17 @@ section .homes{
     height: 100%;
     text-align: center;
     padding: 50px;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 .contact_container{
     max-width: 800px;
     margin: 0 auto;
-    margin-top: 8%;
     
 }
 .contact_container .contact_header{
     font-size: 36px;
-    margin-bottom: 30px;
+    padding-top: 14px;
+    margin-bottom: 20px;
     text-align: center;
     color: #e9ecf0;
 
@@ -439,35 +446,39 @@ section .homes{
 .contact_form{
     text-align: left;
 }
-iframe{
-    align-items: center;
-}
-.contact_form .notice{
-    text-align: center;
-    font-size: 24px;
-    padding-bottom: 20px;
+.notice{
+    font-size: 30px;
     color: #e9ecf0;
+    margin-bottom: 25px;
+}
 
-}
-.form_group{
-    margin-bottom: 20px;
-}
-.contact_form .form_group_meassge textarea{
+
+.contact_form .form_group_message textarea{
     width: 100%;
     height: 300px;
 }
 input, textarea{
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border-radius: 8px;
     border: none;
     background-color: #ffffff;
     color: #333;
+    font-size: 1.4rem;
+    text-align: left;
 }
-input:focus,textarea:focus{
+textarea{
+    height: 300px;
+}
+label {
+    display: block;
+    margin-top: 18px;
+    color: #e9ecf0;
+}
+/*input:focus,textarea:focus{
     outline: none;
     box-shadow: 0 0 8px #bbb;
-}
+}*/
 button{
     display: inline-block;
     padding: 12px 24px;
@@ -510,10 +521,10 @@ button:hover{
 }
 
    
-@media screen and (max-width:480px){
+@media screen and (max-width:730px){
 /*---------------header-----------------*/
     header{
-        width:100%;
+        max-width:730px;
         justify-content: space-between;
         z-index: 100;
         transition: .3s;
@@ -545,21 +556,17 @@ button:hover{
     .img-dalas{
         padding-top: 70px;
         justify-content: center;
-        margin-left: -35%;
         order: 1;
     }
     .text h2{
-        margin-left: 0;
         font-size: bold;
         color: black;
     }
     .dalas-info{
         order: 2;
-        
-
     }
     .dalas-info p{
-        color: grey;
+        color: rgb(252, 243, 243);
         letter-spacing: 1px;
         line-height: 20px;
         font-size: 18px;
@@ -571,26 +578,23 @@ button:hover{
         margin-left: 10px;
     }
     .contact_wrapper{
-        
         grid-template-columns: 1fr;
     }
     .btn-box{
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        width: 280px;
+        width: 100%;
         margin:  15px;
         
     }
     .btn-box .btn{
-        
-        align-items: center;
         justify-content: space-between;
         gap: 8px;
     }
-    .social-media{
-        justify-content: space-between;
-        width: 250px;
+    .social-media{ 
+        width: 100%;
         height: 45px;
-        margin: 0 40px;
     }
     .social-media a{
         width: 40px;
@@ -610,9 +614,9 @@ button:hover{
         padding: -80px;
     }
     
-    .about h1{
-        text-align: center;
-        color: #ece4e4;
+    .about .aboutheader{
+        margin-bottom: -60px;
+
     }
     .row{
         display: grid;
@@ -631,7 +635,7 @@ button:hover{
         margin-bottom: -30px;
     }
     .tab-titles{
-        margin: 10px 0 20px;
+        margin: 10px 0 10px;
     }
     .tab-links{
         font-size: 30px;
@@ -664,24 +668,23 @@ button:hover{
         margin-bottom: 10%;
     }
     /*-------------------porfolio---------------------*/
-    .portfolio{
-        padding-top: 80%;
-    }
-    .portfolio_header{
-        text-align: center;
-    }
+    
+    
     .projects{
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
             gap: 40px;
+            margin-right: 50px;
     }
-    .projects .portfolio_image{
-       margin: 0 30px;  
+    .portfolio_image{
+        max-width: 270px;
     }
                
     .projects .portfolio_image img{
-        width: 300px;
+        width: 250px;
         height: auto;
+        display: flex;
+        padding-left: 15px;
         justify-content: center;
         
     }
@@ -697,21 +700,24 @@ button:hover{
     
     input, textarea{
         padding: 12px 30px;
+        font-size: 15px;
     }
     .form_group{
         margin-bottom: 20px;
     }
     iframe{
+        display: flex;
+        justify-content: center;
         width: 300px;
     }
     /*-----------footer------------*/
 
 }
-@media  screen and (max-width :760px) {
-    
-}
-@media  screen and (max-width :1024px) {
-    
+
+@media  screen and (min-width:430px) and (max-width :730px) {
+    .portfolio_image{
+        margin: auto;
+    }
 }
 @media  screen and (max-width :1280px) {
     

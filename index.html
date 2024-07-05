@@ -9,6 +9,7 @@
     <title>Matemu Baloyi portfolio</title>
 </head>
 <body>
+    
     <header>
         <a href="#homes" class="logo"><span class="matemu" style="color: rgb(49, 49, 190);">Matemu</span>Baloyi</a>
 
@@ -23,14 +24,14 @@
 
             <div class="menu" id="menu-toggle">
                 <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(216, 202, 202); transform: scale(1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(216, 202, 202); transform: scale(1);">
                         <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
                     </svg>
                 </a>
             </div>
             <div class="close-menu" id="close-menu">
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(216, 202, 202); transform: scale(1);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgb(216, 202, 202); transform: scale(1);">
                             <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
                         </svg>
                     </a>
@@ -79,7 +80,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             
             <div class="btn-box">
                 <a href="mhumprhey3@gmail.com" class="btn">Hire me<i class='bx bx-right-arrow-alt'></i></a>
-                <a href="img/Matemu Baloyi CV.pdf" target="_blank" class="btn d-CV">Download CV<i class='bx bx-download' ></i></a>
+                <a href="img/Matemu Baloyi CV.pdf" target="_blank" class="btn d-CV">CV<i class='bx bx-download' ></i></a>
             </div>
             <div class="social-media">
 
@@ -99,7 +100,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                 </div>
 
                 <div class="Icons">
-                    <a href="https://www.x.com"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.linkedin.com/in/matemu-baloyi-b27aba2a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
                     <span></span>
                 </div>
             </div>
@@ -111,7 +112,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
     </section>
 
     <section class="about" id="about">
-            <h1>ABOUT</h1>
+            <h1 class="aboutheader">ABOUT</h1>
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -137,6 +138,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                             <li>- Java</li>
                             <li>- C++</li>
                             <li>- SQL</li>
+                            <li>- php</li>
                             
                             
                         </ul>
@@ -151,7 +153,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                     </div>
                     <div class="tab-contents" id="certificates">
                         <ul>
-                            <li>ALX AICE : <span>2024: February-April</span></li>
+                            <li>ALX AICE : <span>2024: February-April</span><a href="/img/AICE matemubaloyi.jpg" text-decoration="underline">   pdf</a></li>
                             <li></li>
                         </ul>
                     </div>
@@ -195,10 +197,10 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
             </div>
             
             <div class="portfolio_image">
-              <div class="Online_shopping_page">
-                  <a href=""><img src="img/Screenshot (210).png" alt=""></a>
+              <div class="Traffic_department_system">
+                  <img src="img/Screenshot (210).png" alt="" >
                   <h3>
-                    Traffic Department Queue Booking System
+                    Traffic Department Queueing System
                   </h3>
                   <div class="btn-box2">
                     <a href="" class="Web_btn">Github</a>
@@ -217,11 +219,22 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         <h2 class="contact_header">CONTACTS</h2>
         <div class="contact_wrapper">
             <div class="contact_form">
-                <h3 class="notice">Send me a message</h3>   
-                  
-            <form>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDUSwvK3DA0nOtL4eSAPgktcRj4W_F-ATN8oysTywGqYLkbg/viewform?embedded=true" width="440" height="826" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-               
+                <h3 class="notice">Send me a message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group_message">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="button" onclick="sendEmail()">Send</button>
+                </form>
             </div>
             <div class="contact_information">
             <h3>More contact information</h3>
@@ -232,7 +245,26 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
         </div>
         
     </div>
-    
+    <script>
+        async function sendEmail() {
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            const response = await fetch('https://visionary-profiterole-6fbbe4.netlify.app/send_email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        }
+    </script>
    </section>
 
    <footer class="ftco-footer ftco-section">
