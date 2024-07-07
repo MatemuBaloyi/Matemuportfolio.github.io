@@ -288,11 +288,12 @@ section .homes{
     justify-content: center;
     align-items:center;
     width: 340px;
-    height: 420px;
+    height: 410px;
     background-color: #615f5f;
-    border-radius: 20px;
-    
+    border-radius: 20px; 
+    transition: 0.2s; 
 }
+
 .projects .portfolio_image h3{
     text-align: center;
     color: #e9ecf0;
@@ -304,6 +305,7 @@ section .homes{
     
 }
 .projects .portfolio_image img{
+    border-radius: 10px;
     width: 280px;
     margin: 0 5px 0 5px;
 }
@@ -329,6 +331,9 @@ section .homes{
     box-shadow: rgba(60, 64, 67, 0.3)0px 1px 2px 0,
                   rgba(60,64,67,0.15)0px 2px 6px 2px;
     transition: 0.3s;              
+}
+.btn-box2 .Web_btn:hover{
+    background: hsl(226, 80%, 21%);
 }
 /*--------------second about---------------*/
 
@@ -464,7 +469,7 @@ input, textarea{
     border: none;
     background-color: #ffffff;
     color: #333;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: left;
 }
 textarea{

@@ -95,7 +95,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                 </div>
 
                 <div class="Icons">
-                  <a href="https://wa.me/0607289278"><i class='bx bxl-whatsapp' ></i></a>
+                  <a href="https://wa.me/+27607289278"><i class='bx bxl-whatsapp' ></i></a>
                   <span></span>
                 </div>
 
@@ -122,7 +122,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                     <h1 class="sub-title">About me</h1>
                     <p>
                         I'm Matemu, and I'm excited to share my background with you.
-                        With a strong passion for technology, I specialize in software engineering, robotics, and engineering. 
+                        With a strong passion for technology, I specialize in software development and web development. 
                         My career has been marked by enriching experiences and challenging projects, including developing personalized websites and creating solutions for real-world problems.
                         These experiences have honed my skills and shaped my professional growth. I am dedicated to continuous learning and am eager to contribute to innovative and impactful projects in the future. 
                     </p>
@@ -231,7 +231,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                     </div>
                     <div class="form-group_message">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <textarea id="message" name="message"  required></textarea>
                     </div>
                     <button type="button" onclick="sendEmail()">Send</button>
                 </form>
@@ -253,7 +253,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                 message: document.getElementById('message').value
             };
 
-            const response = await fetch('https://visionary-profiterole-6fbbe4.netlify.app/send_email.php', {
+            const response = await fetch('https://portfolioemailfunction.netlify.app/.netlify/functions/send_email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
