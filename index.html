@@ -253,7 +253,7 @@ document.getElementById('close-menu').addEventListener('click', function(event) 
                 message: document.getElementById('message').value
             };
 
-            const response = await fetch('https://portfolioemailfunction.netlify.app/.netlify/functions/send_email', {
+            const response = await fetch('https://portfolioemailer.netlify.app/.netlify/functions/send_email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

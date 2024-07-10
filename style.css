@@ -316,24 +316,25 @@ section .homes{
     margin: 4rem 30px 3rem 30px;
     gap: 20px;
 }
+
 .btn-box2 .Web_btn{
-    text-align: center;
     padding: 10px;
     display: flex;
     align-items: center;
     width: 100px;
     gap: 8px;
-    background: var(--gradient-color-bg);
-    padding: 10px 5px;
+    background: #FFF;
+    padding: 10px 12px;
     border-radius: 5px;
     font-weight: 500;
-    color: #FFF;
+    color: var(--main-color);
     box-shadow: rgba(60, 64, 67, 0.3)0px 1px 2px 0,
                   rgba(60,64,67,0.15)0px 2px 6px 2px;
     transition: 0.3s;              
 }
 .btn-box2 .Web_btn:hover{
-    background: hsl(226, 80%, 21%);
+    background: var(--gradient-color-bg);
+    color: #000;
 }
 /*--------------second about---------------*/
 
@@ -487,15 +488,18 @@ label {
 button{
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--main-color);
+    background-color: #aae9ee;
     border-radius: 10px;
-    color: #fff;
+    color: black;
     border: none;
     cursor: pointer;
+    transition: 0.2s;
 
 }
 button:hover{
-    background-color: var(--main-color);
+    background-color: var( --main-color);
+    color: #000;
+
 
 }
 .contact_information{
